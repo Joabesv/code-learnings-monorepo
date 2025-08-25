@@ -1,8 +1,8 @@
 {
-  "name": "@go/v2-map-and-others",
+  "name": "@go/v3-api",
   "version": "0.0.1",
   "scripts": {
-    "dev": "go run main.go",
+    "dev": "air",
     "build": "go build -o dist/main main.go",
     "start": "dist/main",
     "fmt": "go fmt ./...",

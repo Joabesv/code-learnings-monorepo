@@ -4,14 +4,25 @@
   "tasks": {
     "dev": {
       "persistent": true,
-      "dependsOn": ["^dev"]
-    },
-    "fmt": {
-      "cache": true
+      "dependsOn": ["^build"],
+      "cache": false
     },
     "build": {
       "cache": true,
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", "*.exe", "*.bin"]
+    },
+    "fmt": {
+      "cache": true,
+      "outputs": []
+    },
+    "test": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "outputs": []
+    },
+    "clean": {
+      "cache": false
     }
   }
 }
