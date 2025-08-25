@@ -1,9 +1,9 @@
 package main
 
 import (
-	"encoding/json"
-	"log"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
 type Item struct {
@@ -12,14 +12,22 @@ type Item struct {
 }
 
 func main() {
-	http.HandleFunc("/", homeRequest)
-	log.Fatal(http.ListenAndServe(":8080", nil))
-}
+	router := gin.Default()
 
-func homeRequest(w http.ResponseWriter, r *http.Request) {
-	w.WriteHeader(http.StatusOK)
-	json.NewEncoder(w).Encode(Item{
-		ID:          1,
-		Description: "Item 4854857 ai papai",
+	router.Use(gin.Logger())
+	router.Use(gin.Recovery())
+	apiRouter := router.Group("/api/v1")
+
+	apiRouter.GET("/items", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"message": "pang",
+			"data": []Item{
+				{ID: 1, Description: "Item 1"},
+				{ID: 2, Description: "Item 2"},
+				{ID: 3, Description: "Item 3"},
+			},
+		})
 	})
+
+	router.Run()
 }
