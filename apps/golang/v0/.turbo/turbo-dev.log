@@ -1,9 +1,0 @@
-
-> golang-v0@0.0.1 dev /home/joabe/dev/learnings/apps/golang/v0
-> go run main.go
-
-Hello world
-5.916079783099616
-og x value 34
-non-pointer 34
-pointer 10
