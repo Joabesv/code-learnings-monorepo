@@ -12,4 +12,5 @@ func main() {
 	t := 1.0
 	si := simpleinterest.Calculate(p, r, t)
 	fmt.Println("Simple interest is fuck", si)
+	fmt.Println(simpleinterest.ListStuff())
 }

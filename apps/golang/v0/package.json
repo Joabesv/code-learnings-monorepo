@@ -1,5 +1,5 @@
 {
-  "name": "golang-v0",
+  "name": "@go/v0",
   "version": "0.0.1",
   "scripts": {
     "dev": "go run main.go",

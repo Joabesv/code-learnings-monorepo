@@ -1,5 +1,5 @@
 {
-  "name": "@go/v1-packages",
+  "name": "@go/v2-map-and-others",
   "version": "0.0.1",
   "scripts": {
     "dev": "go run main.go",
