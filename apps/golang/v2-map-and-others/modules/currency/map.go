@@ -43,3 +43,40 @@ func IterateMap() {
 		fmt.Println("Currency code", k, "is", v)
 	}
 }
+
+// deleting a non-existent key does not throw an error
+func DeleteMap() {
+	currencyCode := map[string]string{
+		"USD": "US Dollar",
+		"GBP": "Pound Sterling",
+		"EUR": "Euro",
+	}
+
+	delete(currencyCode, "USD")
+}
+
+type Currency struct {
+	name   string
+	symbol string
+}
+
+func MapWithStruct() {
+	curUSD := Currency{
+		name:   "US Dollar",
+		symbol: "$",
+	}
+
+	curEUR := Currency{
+		name:   "Euro",
+		symbol: "€",
+	}
+
+	currencyCode := map[string]Currency{
+		"USD": curUSD,
+		"EUR": curEUR,
+	}
+
+	for cyCode, cyInfo := range currencyCode {
+		fmt.Println("Currency code", cyCode, "is", cyInfo.name, "and symbol is", cyInfo.symbol)
+	}
+}
