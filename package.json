@@ -1,0 +1,19 @@
+{
+  "name": "learning-monorepo",
+  "author": "Joabe Varjao",
+  "private": true,
+  "workspaces": [
+    "apps/**"
+  ],
+  "description": "Learning monorepo",
+  "type": "module",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "fmt": "turbo fmt"
+  },
+  "packageManager": "pnpm@10.15.0",
+  "devDependencies": {
+    "turbo": "catalog:"
+  }
+}
