@@ -1,0 +1,12 @@
+{
+  "name": "@go/v4-rest-db",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "air | jq -R '. as $line | try (fromjson) catch $line'",
+    "build": "go build -o dist/main main.go",
+    "start": "dist/main",
+    "fmt": "go fmt ./...",
+    "test": "go test ./...",
+    "clean": "rm -rf dist/"
+  } 
+}

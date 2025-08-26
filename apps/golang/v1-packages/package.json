@@ -1,9 +1,12 @@
 {
-  "name": "golang-v1-packages",
+  "name": "@go/v1-packages",
   "version": "0.0.1",
   "scripts": {
     "dev": "go run main.go",
     "build": "go build -o dist/main main.go",
-    "start": "dist/main"
+    "start": "dist/main",
+    "fmt": "go fmt ./...",
+    "test": "go test ./...",
+    "clean": "rm -rf dist/"
   }
 }
